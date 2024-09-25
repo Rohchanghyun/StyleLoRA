@@ -1,0 +1,17 @@
+accelerate launch train_dreambooth_b-lora_sdxl.py \
+ --pretrained_model_name_or_path="stabilityai/stable-diffusion-xl-base-1.0" \
+ --instance_data_dir="/workspace/mnt/sda/changhyun/dataset/images" \
+ --output_dir="./output/content/pokemon/35_constant_6000_nofp" \
+ --instance_prompt="A <v> pokemon" \
+ --resolution=1024 \
+ --rank=64 \
+ --train_batch_size=1 \
+ --learning_rate=5e-5 \
+ --lr_scheduler="constant" \
+ --lr_warmup_steps=0 \
+ --max_train_steps=6000 \
+ --checkpointing_steps=3000 \
+ --seed="35" \
+ --gradient_checkpointing \
+ --use_8bit_adam \
+ --mixed_precision="no"
