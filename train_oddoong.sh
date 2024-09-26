@@ -1,7 +1,7 @@
 accelerate launch train_dreambooth_b-lora_sdxl.py \
  --pretrained_model_name_or_path="stabilityai/stable-diffusion-xl-base-1.0" \
- --instance_data_dir="./data/odoong/odoong_no_background" \
- --output_dir="./output/content/oddoong/48_constant_duck_5000" \
+ --instance_data_dir="./data/odoong/oddoong_sleep" \
+ --output_dir="./output/content/oddoong/48_constant_sleep_duck_5000" \
  --instance_prompt="A <v> duck" \
  --resolution=1024 \
  --rank=64 \
