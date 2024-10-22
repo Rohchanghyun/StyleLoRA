@@ -4,8 +4,13 @@ export NCCL_IB_DISABLE="1"
 
 accelerate launch train_dreambooth_b-lora_sdxl.py \
  --pretrained_model_name_or_path="stabilityai/stable-diffusion-xl-base-1.0" \
+<<<<<<< HEAD
  --instance_data_dir="./data/odoong/oddoong_sleep" \
  --output_dir="./output/content/oddoong/35_constant_sleep_duck_5000" \
+=======
+ --instance_data_dir="./data/paduk" \
+ --output_dir="./output/content/paduk/48_constant_duck_2000" \
+>>>>>>> eae5db0646acbc65fb76d2c5becfb5441d63f5eb
  --instance_prompt="A <v> duck" \
  --resolution=1024 \
  --rank=64 \
@@ -13,7 +18,7 @@ accelerate launch train_dreambooth_b-lora_sdxl.py \
  --learning_rate=5e-5 \
  --lr_scheduler="constant" \
  --lr_warmup_steps=0 \
- --max_train_steps=5000 \
+ --max_train_steps=2000 \
  --checkpointing_steps=1000 \
  --seed="35" \
  --gradient_checkpointing \
